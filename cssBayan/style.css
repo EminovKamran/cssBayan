@@ -37,46 +37,37 @@ header {
 }
 .accordion:hover > .accordion-item .accordion-title .accordion-element { 
     background-color: goldenrod;
-    transition: 0.4s ease-in;
+    transition: 0.9s;
 }
 .accordion:hover > .accordion-item .accordion-title .accordion-element .accordion-name { 
     color: blue;
     cursor: pointer;
 }
 .accordion:hover > .accordion-item > .accordion-title > .accordion-element > .icon {
-    overflow: visible;
     width: 20px;
     height: 20px;
 }
 .accordion-item:hover > .accordion-title > .accordion-element > .accordion-icon {
-    overflow: visible;
     width: 20px;
     height: 20px;
     background-image: url(../cssBayan/img/door-open-solid.svg);
     background-position: center;
     background-repeat: no-repeat;
 }
-.accordion-item:hover > .accordion-picture { 
-    width: 100%;
-    height: 100%;
-    overflow: visible;
-    transition: 0.9s ease-in;
-    transform: scale(1);
+.accordion-item:hover > .accordion-picture > .accordion-image { 
+    max-height: 100vh;
+    max-width: 100vh;
 }
-.accordion-picture {
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    transform: scale(0)
-}
-.accordion-input:checked ~ .accordion-picture {
+.accordion-picture .accordion-image {
     width: 100%;
-    height: 100%;
-    overflow: visible;
-    transform: scale(1);
+    max-height: 0;
+    transition: max-height 0.7s ease;
+}
+.accordion-input:checked ~ .accordion-picture .accordion-image {
+    max-width: 100vh;
+    max-height: 100vh;
 }
 .accordion-input:checked + .accordion-title .accordion-element .accordion-icon {
-    overflow: visible;
     width: 20px;
     height: 20px;
     background-image: url(../cssBayan/img/door-open-solid.svg);
@@ -109,21 +100,13 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-.accordion-icon_open {
-    overflow: hidden;
-    width: 0;
-    height: 0;
-    background-image: url(../cssBayan/img/door-open-solid.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-}
 .icon {
-    overflow: hidden;
     width: 0;
     height: 0;
     background-image: url(../cssBayan/img/door-closed-solid.svg);
     background-position: center;
     background-repeat: no-repeat;
+    transition: 0.7s;
 }
 .accordion-picture .img-one {
     width: 350px;
