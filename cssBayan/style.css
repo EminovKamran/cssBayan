@@ -60,6 +60,13 @@ header {
     max-height: 100rem;
     max-width: 100rem;
 } */
+
+label:active > .accordion-picture > .accordion-image {
+    opacity: 0.6;
+}
+label:active > .accordion-element .accordion-name {
+    color: red;
+}
 .accordion-picture .accordion-image {
     width: 100%;
     max-height: 0;
