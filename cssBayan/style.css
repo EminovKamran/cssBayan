@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(229, 223, 199);
+}
+header {
+    max-width: 50rem;
+    margin: 0 auto;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 2.1vw;
+    font-weight: 700;
+    padding-left: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+.conteiner {
+    padding: 1.25rem;   
+}
+.accordion {
+    max-width: 50rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.accordion-input {
+    width: 0;
+    height: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    display: none;
+}
+.accordion-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* .accordion:hover > .accordion-item .accordion-title .accordion-element { 
+    background-color: goldenrod;
+    transition: 0.9s;
+}
+.accordion:hover > .accordion-item .accordion-title .accordion-element .accordion-name { 
+    color: blue;
+    cursor: pointer;
+}
+.accordion:hover > .accordion-item > .accordion-title > .accordion-element > .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+} */
+/* .accordion-item:hover > .accordion-title > .accordion-element > .accordion-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-image: url(../cssBayan/img/door-open-solid.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.accordion-item:hover > .accordion-title > .accordion-picture > .accordion-image { 
+    max-height: 100rem;
+    max-width: 100rem;
+} */
+
+/* label:active > .accordion-picture > .accordion-image {
+    opacity: 0.6;
+}
+label:active > .accordion-element {
+    color: red;
+} */
+.accordion-picture .accordion-image {
+    width: 100%;
+    max-height: 0;
+    transition: max-height 0.9s ease;
+}
+.accordion-input:checked + .accordion-title .accordion-picture .accordion-image {
+    max-width: 100rem;
+    max-height: 100rem;
+}
+.accordion-input:checked + .accordion-title .accordion-element .accordion-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-image: url(../cssBayan/img/door-open-solid.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.accordion-input:checked + .accordion-title .accordion-element {
+    background-color: goldenrod;
+    color: blue;
+}
+.accordion-title {
+    font-family: 'Roboto Mono', sans-serif;
+    font-weight: 500;
+    font-size: 2.1vw;
+    cursor: pointer;
+    transition: background 0.2s ease-in;
+    width: 100%;
+    border-radius: 10px;
+    padding-bottom: 0.313rem;
+}
+.accordion-item:hover {
+    cursor: pointer;
+}
+.accordion-element {
+    background-color: aliceblue;
+    max-width: 50rem;
+    border-radius: 1.25rem;
+    padding: 0.625rem 0.625rem 0.625rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon {
+    width: 0;
+    height: 0;
+    background-image: url(../cssBayan/img/door-closed-solid.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.7s;
+}
+.accordion-picture .img-one {
+    height: 30vw;
+    background-image: url(../cssBayan/img/google-russian.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0.313rem auto;
+    background-size: contain;
+}
+.accordion-picture .img-two {
+    height: 30vw;
+    background-image: url(../cssBayan/img/junior-russian.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0.313rem auto;
+    background-size: contain;
+}
+.accordion-picture .img-three {
+    height: 30vw;
+    background-image: url(../cssBayan/img/not-a-bug-russian.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0.313rem auto;
+    background-size: contain;
+}
+.accordion-picture .img-four {
+    height: 30vw;
+    background-image: url(../cssBayan/img/slothzy-russian.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0.313rem auto;
+    background-size: contain;
+}
+.accordion-picture .img-five {
+    height: 30vw;
+    background-image: url(../cssBayan/img/thanks-russian.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0.313rem auto;
+    background-size: contain;
+}
+
+label:active > .accordion-picture > .accordion-image {
+    opacity: 0.6;
+}
+
+@media (hover: hover) {
+    .accordion:hover > .accordion-item .accordion-title .accordion-element { 
+        background-color: goldenrod;
+        transition: 0.9s;
+    }
+    .accordion:hover { 
+        color: blue;
+        cursor: pointer;
+    }
+    .accordion:hover > .accordion-item > .accordion-title > .accordion-element > .icon {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+    .accordion-item:hover > .accordion-title > .accordion-element > .accordion-icon {
+        width: 1.25rem;
+        height: 1.25rem;
+        background-image: url(../cssBayan/img/door-open-solid.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .accordion-item:hover > .accordion-title > .accordion-picture > .accordion-image { 
+        max-height: 100rem;
+        max-width: 100rem;
+    }
+    .accordion-item:hover {
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 820px) {
+    .accordion-element {
+        padding: 0.400rem 0.400rem 0.400rem;
+    }
+    .accordion-input:checked + .accordion-title .accordion-element .accordion-icon {
+        width: 1rem;
+        height: 1rem;
+        background-image: url(../cssBayan/img/door-open-solid.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .accordion-icon {
+        width: 1rem;
+        height: 1rem;
+        background-image: url(../cssBayan/img/door-closed-solid.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: 0.3s;
+    }
+}
+
+@media (max-width: 395px) {
+    .accordion-element {
+        padding: 0.300rem 0.300rem 0.300rem;
+    }
+    .accordion-input:checked + .accordion-title .accordion-element .accordion-icon {
+        width: 0.6rem;
+        height: 0.6rem;
+        background-image: url(../cssBayan/img/door-open-solid.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .accordion-title {
+        padding-bottom: 0rem;
+    }
+    .accordion-icon {
+        width: 0.6rem;
+        height: 0.6rem;
+        background-image: url(../cssBayan/img/door-closed-solid.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: 0.3s;
+    }
+}
+label:active > .accordion-element > .accordion-name {
+    color: black;
+}
