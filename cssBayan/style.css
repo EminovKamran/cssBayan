@@ -15,7 +15,7 @@ header {
     padding-left: 20px;
 }
 .conteiner {
-    padding: 20px;
+    padding: 1.25rem;   
 }
 .accordion {
     max-width: 50rem;
@@ -55,7 +55,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
 }
-.accordion-item:hover > .accordion-picture > .accordion-image { 
+.accordion-item:hover > .accordion-title > .accordion-picture > .accordion-image { 
     max-height: 100rem;
     max-width: 100rem;
 }
@@ -64,7 +64,7 @@ header {
     max-height: 0;
     transition: max-height 0.9s ease;
 }
-.accordion-input:checked ~ .accordion-picture .accordion-image {
+.accordion-input:checked + .accordion-title .accordion-picture .accordion-image {
     max-width: 100rem;
     max-height: 100rem;
 }
@@ -95,8 +95,8 @@ header {
 .accordion-element {
     background-color: aliceblue;
     max-width: 50rem;
-    border-radius: 10px;
-    padding: 10px 10px 10px;
+    border-radius: 1.25rem;
+    padding: 0.625rem 0.625rem 0.625rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -110,45 +110,49 @@ header {
     transition: 0.7s;
 }
 .accordion-picture .img-one {
-    width: 22rem;
-    height: 22rem;
+    /* width: 100vw; */
+    height: 30vw;
     background-image: url(../cssBayan/img/google-russian.svg);
     background-position: center;
     background-repeat: no-repeat;
     margin: 5px auto;
-    background-size: 100% auto;
+    background-size: contain;
 }
 .accordion-picture .img-two {
-    width: 22rem;
-    height: 22rem;
+    /* width: 100vw; */
+    height: 30vw;
     background-image: url(../cssBayan/img/junior-russian.svg);
     background-position: center;
     background-repeat: no-repeat;
     margin: 5px auto;
+    background-size: contain;
 }
 .accordion-picture .img-three {
-    width: 22rem;
-    height: 22rem;
+    /* width: 100vw; */
+    height: 30vw;
     background-image: url(../cssBayan/img/not-a-bug-russian.svg);
     background-position: center;
     background-repeat: no-repeat;
     margin: 5px auto;
+    background-size: contain;
 }
 .accordion-picture .img-four {
-    width: 22rem;
-    height: 22rem;
+    /* width: 100vw; */
+    height: 30vw;
     background-image: url(../cssBayan/img/slothzy-russian.svg);
     background-position: center;
     background-repeat: no-repeat;
     margin: 5px auto;
+    background-size: contain;
 }
 .accordion-picture .img-five {
-    width: 22rem;
-    height: 22rem;
+    /* width: 100vw; */
+    height: 30vw;
     background-image: url(../cssBayan/img/thanks-russian.svg);
     background-position: center;
     background-repeat: no-repeat;
     margin: 5px auto;
+    background-size: contain;
 }
 
 @media (max-width: 395px) {
@@ -162,4 +166,13 @@ header {
         background-position: center;
         background-repeat: no-repeat;
     }
+    /* .accordion-picture .img-one {
+        width: 12rem;
+        height: 12rem;
+        background-image: url(../cssBayan/img/google-russian.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 5px auto;
+        background-size: contain;
+    } */
 }
