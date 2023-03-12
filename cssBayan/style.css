@@ -61,12 +61,12 @@ header {
     max-width: 100rem;
 } */
 
-label:active > .accordion-picture > .accordion-image {
+/* label:active > .accordion-picture > .accordion-image {
     opacity: 0.6;
 }
-label:active > .accordion-element .accordion-name {
+label:active > .accordion-element {
     color: red;
-}
+} */
 .accordion-picture .accordion-image {
     width: 100%;
     max-height: 0;
@@ -157,12 +157,17 @@ label:active > .accordion-element .accordion-name {
     margin: 0.313rem auto;
     background-size: contain;
 }
+
+label:active > .accordion-picture > .accordion-image {
+    opacity: 0.6;
+}
+
 @media (hover: hover) {
     .accordion:hover > .accordion-item .accordion-title .accordion-element { 
         background-color: goldenrod;
         transition: 0.9s;
     }
-    .accordion:hover > .accordion-item .accordion-title .accordion-element .accordion-name { 
+    .accordion:hover { 
         color: blue;
         cursor: pointer;
     }
@@ -230,4 +235,6 @@ label:active > .accordion-element .accordion-name {
         transition: 0.3s;
     }
 }
-
+label:active > .accordion-element > .accordion-name {
+    color: black;
+}
